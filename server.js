@@ -1,4 +1,5 @@
 const { animals } = require("./data/animals");
+// ??? instead of using `import express from 'express';' we're using this version to avoid using modern js?
 const express = require("express");
 const res = require("express/lib/response");
 const PORT = process.env.PORT || 3001;
@@ -7,6 +8,12 @@ const app = express();
 app.listen(PORT, () => {
 	console.log(`API server now on port ${PORT}!`);
 });
+
+// ??? I'm just typing stuff with no understanding of how it works
+// parse incoming string or array data 
+app.use(express.urlencoded({ extended: true }));
+// parse incoming JSON data
+app.use(express.json());
 
 function filterByQuery(query, animalsArray) {
 	let personalityTraitsArray = [];
@@ -53,6 +60,8 @@ app.get("/api/animals", (req, res) => {
 	res.json(results);
 });
 
+// GET route for the animals. With multiple routes, pay attention to the order
+// param route must come *after* GET route
 app.get("/api/animals/:id", (req, res) => {
 	const result = findById(req.params.id, animals);
 	if (result) {
@@ -60,4 +69,10 @@ app.get("/api/animals/:id", (req, res) => {
 	} else {
 		res.sendStatus(404);
 	}
+});
+
+app.post("/api/animals", (req, res) => {
+	// req.body is where our incoming content will be
+	console.log(req.body);
+	res.json(req.body);
 });

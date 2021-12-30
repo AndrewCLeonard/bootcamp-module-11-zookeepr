@@ -1,27 +1,37 @@
 {
-  "name": "bootcamp-module-11-zookeepr",
-  "version": "1.0.0",
-  "description": "bootcamp module 11",
-  "main": "server.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AndrewCLeonard/bootcamp-module-11-zookeepr.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AndrewCLeonard/bootcamp-module-11-zookeepr/issues"
-  },
-  "homepage": "https://github.com/AndrewCLeonard/bootcamp-module-11-zookeepr#readme",
-  "dependencies": {
-    "express": "^4.17.2"
-  }
+	"name": "bootcamp-module-11-zookeepr",
+	"version": "1.0.0",
+	"description": "bootcamp module 11",
+	"main": "server.js",
+	"directories": {
+		"lib": "lib"
+	},
+	"scripts": {
+		"dev": "npx nodemon --exec npx babel-node src/server.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AndrewCLeonard/bootcamp-module-11-zookeepr.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/AndrewCLeonard/bootcamp-module-11-zookeepr/issues"
+	},
+	"homepage": "https://github.com/AndrewCLeonard/bootcamp-module-11-zookeepr#readme",
+	"dependencies": {
+		"@babel/runtime": "^7.16.5",
+		"express": "^4.17.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.16.0",
+		"@babel/core": "^7.16.5",
+		"@babel/node": "^7.16.5",
+		"@babel/plugin-transform-runtime": "^7.16.5",
+		"@babel/preset-env": "^7.16.5",
+		"nodemon": "^2.0.15"
+	}
 }
