@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"dev": "npx nodemon --exec npx babel-node src/server.js",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "jest",
 		"start": "nodemon server.js"
 	},
 	"repository": {
@@ -32,6 +32,7 @@
 		"@babel/node": "^7.16.5",
 		"@babel/plugin-transform-runtime": "^7.16.5",
 		"@babel/preset-env": "^7.16.5",
+		"jest": "^27.4.5",
 		"nodemon": "^2.0.15"
 	}
 }
