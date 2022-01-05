@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const animalRoutes = require("../apiRoutes/animalRoutes");
 
-router.use("./animalRoutes");
-router.use("./zookeeperRoutes");
+router.use(require("./animalRoutes"));
+// router.use((require("./zookeeperRoutes")}; // Does it need to be like this?
+router.use(require("./zookeeperRoutes"));
 
 module.exports = router;
